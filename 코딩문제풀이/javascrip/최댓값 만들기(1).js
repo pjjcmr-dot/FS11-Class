@@ -70,7 +70,7 @@
 // }
 //
 //!console.log(solution([1, 2, 3, 4, 5]));
-//!console.log(solution([0, 31, 24, 10, 1, 9]));
+//!
 //
 //
 // 매소드 사용
@@ -110,7 +110,10 @@
 // console.log(it.next(), it.next().value);
 // // 출력: 1 2 3
 
-
-
-
-
+function solution(numbers) {
+  numbers.sort((a, b) => b - a);
+  return numbers[0] * numbers[1];
+}
+// 문제에서 두 개를 곱해 만들 수 있는 최대값을 구하는 것이므로 내림차순을 하여 최대 숫자를 0, 1의 자리에 배치하여 곱셈 계산
+console.log(solution([1, 2, 3, 4, 5]));
+console.log(solution([0, 31, 24, 10, 1, 9]));
